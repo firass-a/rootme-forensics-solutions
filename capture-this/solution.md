@@ -82,7 +82,7 @@ AHHH ! here we can notice that we found a keypass ``` -=b9w9h^+j%\x-rMPUqv9Vv`@X
 
 <p align="center"> <img src="./captures/flag.png" alt="pwds photo" width="600"/> </p>  
 
-COngratulations you got the flag ``` @cropalypse_vuln_is_impressive ```
+Congratulations you got the flag ``` @cropalypse_vuln_is_impressive ```
 
 
 
