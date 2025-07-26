@@ -8,7 +8,7 @@ It’s up to you
 
 
 ---
-### First step : Extract files and examine them 
+## First step : Extract files and examine them 
 First , we get a `.zip` file. Extract it using :
 
 ```bash
@@ -19,7 +19,7 @@ Inside , we will find two new files a png image , and ```kdbx``` extension file
 
 before we keep on with this write up 
 
-## what is a kdbx file ?
+### what is a kdbx file ?
 It's basically nothing but an encrypted data-base file used by ```KeePass``` , which is an  open-source passwords manager .
 
 A ```.kdbx``` file stores : 
@@ -30,7 +30,7 @@ It is also protected by ``` Encryption Techniques ``` like ``` AES-256 , ChaCha2
 
 In order to unlock this file , we need a ``` Master password ``` and that is what we are going to be looking for in this challenge in order to find the flag 
 
-### Second step : Oppening the image and finding clues 
+## Second step : Oppening the image and finding clues 
 Looking at the png file the challenge provided for us , we can see some passwords which obviously not the solution for our challenge.
 <p align="center"> <img src="./captures/challengte.png" alt="pwds photo" width="600"/> </p>  
 
@@ -48,16 +48,16 @@ An image is basically a 2D array of pixels , a Matrix of pixels , cropping it me
 - Select a cropping box 
 - Then just extract the cropped area and re-encode it into an image format .
 
-### Third Step : Get the cropped part back , and find the Flag !
+## Third Step : Get the cropped part back , and find the Flag !
 
 As i was checking if there was any way to restore a cropped part of an image i came across ``` ACROPALYPSE Vulnerability ``` , so what is it about : 
 its a vulnerability that allows attackers to recover uncropped versions of screenshots edited using Markup tool on google pixel as well as ``` Microsoft Snipping tool ``` on windows 11 , how is that even possible ? 
-## How aCROPALYPSE vulnerability works :
+### How aCROPALYPSE vulnerability works :
 In the tools I mentionned earlier :
 - When you cropp the image the software did not discard the uncropped image data instead 
 - It only changes the header of the image data and leave the rest of the original image there 
 
-#### For example : 
+## For example : 
 - A PNG file is made of 
 - IHDR : header 
 - IDAT : Image data 
